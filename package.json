@@ -1,0 +1,52 @@
+{
+  "name": "webpack-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node script/server.js",
+    "dev": "node script/server.js --env=dev",
+    "pro": "node script/server.js --env=pro",
+    "build": "node script/build.js",
+    "build:analyze": "node script/build.js --analyze=true",
+    "lint": "node lint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohyaoo/webpack-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohyaoo/webpack-cli/issues"
+  },
+  "homepage": "https://github.com/ohyaoo/webpack-cli#readme",
+  "port": 3000,
+  "devDependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@gem-mine/eslint-config-recommend": "^3.2.1",
+    "@types/mini-css-extract-plugin": "^0.9.1",
+    "@types/minimist": "^1.2.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "eslint-loader": "^4.0.2",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^4.4.1",
+    "husky": "^4.3.0",
+    "mini-css-extract-plugin": "^0.11.2",
+    "minimist": "^1.2.5",
+    "open": "^7.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.2",
+    "webpack-bundle-analyzer": "^3.9.0",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
